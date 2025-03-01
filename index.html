@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Link Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <span class="logo-text">Phishing Link Detection System</span>
+        </div>
+        <button class="support-btn" id="supportBtn">Get Support</button>
+    </header>
+
+    <section class="hero">
+        <div class="video-container">
+            <video class="video-background" autoplay muted loop playsinline>
+                <source src="/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Protect Yourself from Phishing Attacks</h1>
+            <p>Our advanced detection system helps you identify potentially dangerous links before they can harm you.</p>
+        </div>
+    </section>
+
+    <div class="input-container">
+        <div class="input-group">
+            <input type="url" id="urlInput" placeholder="Enter any suspicious URL to check..." required>
+            <button id="analyzeBtn">Analyze Now</button>
+        </div>
+        <div id="result" class="result hidden"></div>
+        <div id="loader" class="loader hidden"></div>
+    </div>
+
+    <section class="features">
+        <div class="feature-card" data-aos="fade-up">
+            <div class="feature-icon">🔍</div>
+            <h3>Smart Detection</h3>
+            <p>Advanced algorithms analyze URLs for common phishing patterns and suspicious characteristics.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">⚡</div>
+            <h3>Real-Time Analysis</h3>
+            <p>Get instant results about the safety of any URL you want to check.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">🛡️</div>
+            <h3>Comprehensive Protection</h3>
+            <p>Checks for multiple threat indicators including domain age, SSL certificates, and suspicious patterns.</p>
+        </div>
+    </section>
+
+    <div class="support-modal" id="supportModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Contact Support</h2>
+            <form id="supportForm" class="support-form">
+                <div class="form-group">
+                    <input type="email" id="emailInput" placeholder="Your Email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subjectInput" placeholder="Subject" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="messageInput" placeholder="Describe your issue..." required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="currentYear"></span> PhishGuard. Protecting users from phishing attacks worldwide.</p>
+    </footer>
+
+    <script src="/logic.js"></script>
+</body>
+</html>
